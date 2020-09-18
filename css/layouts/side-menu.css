@@ -42,18 +42,28 @@ The content `<div>` is where all your content goes.
 .content {
     margin: 0 auto;
     padding: 0 2em;
-    max-width: 800px;
+    max-width: 1200px;
     margin-bottom: 50px;
     line-height: 1.6em;
 }
 
+
+
 .header {
      margin: 0;
-     color: #333;
+     color: #000;
      text-align: center;
      padding: 2.5em 2em 0;
      border-bottom: 1px solid #eee;
  }
+    .header_photo{
+        float:right;
+        width:20%;
+    }
+    .header_left {
+        float: left;
+        width: 80%;
+    }
     .header h1 {
         margin: 0.2em 0;
         font-size: 3em;
@@ -68,9 +78,33 @@ The content `<div>` is where all your content goes.
 
 .content-subhead {
     margin: 50px 0 20px 0;
-    font-weight: 300;
-    color: #888;
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 150%;
+    color: #222;
 }
+
+.content-subtitle {
+    font-weight: 500;
+    padding-left: 50px;
+    font-size: 150%;
+    line-height: 150%;
+    border-left: 10px solid #000;
+    color: #555;
+}
+
+.content-subcontent {
+    font-weight: 200;
+    color: #777;
+    margin-left: 50px;
+    padding-left: 30px;
+    font-size: 150%;
+    line-height: 150%;
+    font-size: 20;
+}
+
+
+
 
 
 
