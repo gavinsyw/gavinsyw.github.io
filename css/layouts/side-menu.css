@@ -79,16 +79,16 @@ The content `<div>` is where all your content goes.
 .content-subhead {
     margin: 50px 0 20px 0;
     font-weight: bold;
-    font-size: 150%;
-    line-height: 150%;
+    font-size: 130%;
+    line-height: 130%;
     color: #222;
 }
 
 .content-subtitle {
     font-weight: 500;
     padding-left: 50px;
-    font-size: 150%;
-    line-height: 150%;
+    font-size: 130%;
+    line-height: 130%;
     border-left: 10px solid #000;
     color: #555;
 }
@@ -98,8 +98,8 @@ The content `<div>` is where all your content goes.
     color: #777;
     margin-left: 50px;
     padding-left: 30px;
-    font-size: 150%;
-    line-height: 150%;
+    font-size: 130%;
+    line-height: 130%;
     font-size: 20;
 }
 
