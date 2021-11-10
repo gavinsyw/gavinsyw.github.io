@@ -120,7 +120,7 @@ keep_files:
   - .git
 
 # Plug-ins
-plugins:
+gem:
   - jekyll-archives
   - jekyll-diagrams
   - jekyll-email-protect
