@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: This page is still under construction.
+# description: This page is still under construction.
 nav: true
 display_categories: []
 horizontal: false
