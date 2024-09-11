@@ -1,14 +1,14 @@
 "Jin":
   - firstname: ["Haiming", "H."]
-    url: https://jhc.sjtu.edu.cn/~haimingjin/
+    url: https://jhc.sjtu.edu.cn/~haimingjin
 
 "Kumar":
   - firstname: ["Swarun", "S."]
-    url: https://swarunkumar.com/
+    url: https://swarunkumar.com
 
 "Wang":
-  - firstname: ["Jingxian", "J."]
-    url: https://wangwireless.com/
+  - firstname: ["Jingxian"]
+    url: https://wangwireless.com
 
 "Majidi":
   - firstname: ["Carmel", "C."]
@@ -19,12 +19,16 @@
     url: https://zefangli.github.io
 
 "Ge":
-  - firstname: ["Changhan, C."]
-    url: https://changhange.github.io/
+  - firstname: ["Changhan", "C."]
+    url: https://changhange.github.io
+
+"Qiu":
+  - firstname: ["Lili", "L."]
+    url: https://www.cs.utexas.edu/~lili
 
 "Wang":
-  - firstname: ["Chonghuan", "C."]
-    url: https://www.mit.edu/~chwang9/
+  - firstname: ["Chonghuan"]
+    url: https://www.mit.edu/~chwang9
 
 "Zadan":
   - firstname: ["Mason", "M."]
@@ -36,4 +40,4 @@
   
 "Pan":
   - firstname: ["Hao", "H."]
-    url: https://haopan.netlify.app/
+    url: https://haopan.netlify.app
