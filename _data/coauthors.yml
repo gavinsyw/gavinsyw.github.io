@@ -29,3 +29,11 @@
 "Zadan":
   - firstname: ["Mason", "M."]
     url: https://scholar.google.com/citations?user=xq1gDQQAAAAJ
+
+"Yuan":
+  - firstname: ["Kuang", "K."]
+    url: https://www.andrew.cmu.edu/user/kuangy
+  
+"Pan":
+  - firstname: ["Hao", "H."]
+    url: https://haopan.netlify.app/

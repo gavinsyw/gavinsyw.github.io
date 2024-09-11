@@ -5,4 +5,4 @@ title: CV
 nav: true
 ---
 
-<object data="../assets/pdf/cv.pdf" width="800" height="1200" type='application/pdf'/>
+<object data="../assets/pdf/cv_YiwenSong_090224.pdf" width="800" height="1200" type='application/pdf'/>
