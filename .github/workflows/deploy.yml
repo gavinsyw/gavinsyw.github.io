@@ -20,7 +20,9 @@ jobs:
       with:
         ruby-version: '3.3.5'
     - name: Install dependencies
-      run: sudo apt-get install libmagickwand-dev
+      run: |
+        sudo apt-get update
+        sudo apt-get install libmagickwand-dev
     - name: Install gems
       run: bundle install
     - name: Enable bundler cache
