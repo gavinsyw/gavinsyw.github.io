@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="160" viewBox="0 0 280 160">
+  <rect width="280" height="160" fill="#f0f0f0"/>
+  <rect x="1" y="1" width="278" height="158" fill="none" stroke="#ddd" stroke-width="1"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#999" font-family="system-ui,sans-serif" font-size="14">Image / Video</text>
+</svg>

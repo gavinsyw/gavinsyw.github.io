@@ -2,10 +2,73 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
-// Typography
+// Typography (ppjhh-style: clear hierarchy, readable body)
 
 p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
   color: var(--global-text-color);
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+// About page hero (post header)
+.post-header {
+  .post-title {
+    font-size: 2.5rem;
+    font-family: 'Source Serif 4', Georgia, serif;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+  }
+  .desc {
+    font-size: 1rem;
+    color: var(--global-text-color-light);
+    margin-bottom: 0.75rem;
+  }
+  .header-contact {
+    margin-bottom: 1.5rem;
+    .contact-icons {
+      font-size: 1.35rem;
+      a {
+        display: inline-block;
+        margin-right: 0.6rem;
+        transition: transform 0.2s ease, color 0.2s ease;
+        i::before {
+          color: var(--global-text-color-light);
+          transition: color 0.2s ease;
+        }
+        &:hover {
+          transform: scale(1.2);
+          i::before {
+            color: var(--global-theme-color);
+          }
+        }
+      }
+    }
+    .contact-note {
+      margin-top: 0.35rem;
+      font-size: 0.8125rem;
+      color: var(--global-text-color-light);
+    }
+  }
 }
 
 hr {
@@ -52,29 +115,196 @@ blockquote {
   color: var(--global-theme-color);
 }
 
-// Profile
+// About me block: two-column (text | photo), then address full-width below
+.about-me-block {
+  // Lunar New Year easter egg: lantern lights up + tooltip on hover
+  .cn-egg-wrapper {
+    display: inline-block;
+    position: relative;
+    margin-left: 0.35rem;
+    vertical-align: middle;
+    cursor: default;
+    transform: translateY(-4px);
+  }
+  .cn-egg {
+    font-size: 0.65em;
+    opacity: 0.5;
+    display: inline-block;
+    transition: opacity 0.25s ease, filter 0.25s ease, transform 0.2s ease;
+  }
+  .cn-egg-wrapper:hover .cn-egg {
+    opacity: 1;
+    filter: drop-shadow(0 0 4px rgba(255, 180, 50, 0.7));
+    transform: scale(1.08);
+  }
+  .cn-egg-tooltip {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%) translateY(-6px);
+    padding: 0.35rem 0.6rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    white-space: nowrap;
+    color: #fef9e7;
+    background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
+    border-radius: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.02em;
+  }
+  .cn-egg-wrapper:hover .cn-egg-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-8px);
+  }
+  .about-me-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .about-me-text {
+    flex: 1 1 280px;
+    min-width: 0;
+    a {
+      transition: color 0.2s ease, opacity 0.2s ease;
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+  .profile-card {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 180px;
+    margin-left: 0;
+    .profile-image-wrap {
+      width: 100%;
+      aspect-ratio: 1;
+      overflow: hidden;
+      border-radius: $card-radius;
+      box-shadow: $card-shadow;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      .profile-image {
+        transition: transform 0.4s ease;
+      }
+      &:hover {
+        box-shadow: $card-shadow-hover;
+        transform: scale(1.02);
+        .profile-image {
+          transform: scale(1.05);
+        }
+      }
+    }
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+  .about-research {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--global-divider-color);
+    .about-research-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--global-text-color-light);
+      margin-bottom: 0.75rem;
+    }
+    .about-research-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .about-research-tag {
+      display: inline-block;
+      font-size: 0.875rem;
+      padding: 0.35rem 0.75rem;
+      background: rgba(var(--global-theme-color-rgb, 91, 79, 232), 0.08);
+      color: var(--global-theme-color);
+      border-radius: 6px;
+      border: 1px solid rgba(var(--global-theme-color-rgb, 91, 79, 232), 0.2);
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      &:hover {
+        transform: translateY(-2px);
+        background: rgba(var(--global-theme-color-rgb, 91, 79, 232), 0.14);
+        border-color: rgba(var(--global-theme-color-rgb, 91, 79, 232), 0.35);
+        box-shadow: 0 2px 8px rgba(var(--global-theme-color-rgb, 91, 79, 232), 0.15);
+      }
+    }
+  }
+  .about-education {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--global-divider-color);
+    .about-education-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--global-text-color-light);
+      margin-bottom: 0.75rem;
+    }
+  }
+  .education-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .education-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.6rem 0.75rem;
+    margin: 0 -0.75rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    transition: background 0.25s ease, padding-left 0.25s ease;
+    font-size: 1rem;
+    line-height: 1.5;
+    &:hover {
+      background: rgba(var(--global-theme-color-rgb, 91, 79, 232), 0.06);
+      padding-left: 1rem;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    .education-icon {
+      flex-shrink: 0;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .education-degree {
+      font-weight: 600;
+      color: var(--global-text-color);
+    }
+    .education-detail {
+      color: var(--global-text-color-light);
+      font-size: 0.9375rem;
+    }
+  }
+}
 
+// Legacy profile (shared with .profile-card on about page)
 .profile {
   margin-left: 1rem;
   width: 100%;
-
-  .address {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    font-family: monospace;
-    p {
-      display: inline-block;
-      margin: 0;
-    }
-  }
 }
 
 @media (min-width: 576px) {
   .profile {
     width: 30%;
-    .address {
-      p { display: block; }
-    }
   }
 }
 
@@ -98,6 +328,15 @@ blockquote {
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
+  .nav-link {
+    font-weight: 500;
+    &:hover {
+      color: var(--global-hover-color) !important;
+    }
+    &.active {
+      color: var(--global-theme-color);
+    }
+  }
 }
 .navbar .dropdown-menu {
   background-color: var(--global-bg-color);
@@ -196,15 +435,85 @@ blockquote {
 }
 
 
-// News
-
-.news table td {
-  font-size: 1rem;
-  color: var(--global-text-color);
+// News: timeline (vertical line + nodes, date and content to the right)
+.news {
+  h2 {
+    margin-top: 0;
+  }
 }
 
-.news table th {
-  color: var(--global-text-color);
+.news-timeline {
+  position: relative;
+  padding-left: 0.5rem;
+  $news-line-left: 0.5rem;
+  $item-padding-left: 2rem;
+  .timeline-line {
+    position: absolute;
+    left: $news-line-left;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    margin-left: -1px;
+    background: var(--global-divider-color);
+    border-radius: 1px;
+  }
+  .timeline-item {
+    position: relative;
+    padding-left: $item-padding-left;
+    padding-top: 0.15rem;
+    padding-bottom: 1.25rem;
+    margin: 0 -0.25rem;
+    border-radius: 6px;
+    transition: background 0.25s ease;
+    &:last-child {
+      padding-bottom: 0;
+    }
+    &:hover {
+      background: rgba(var(--global-theme-color-rgb, 91, 79, 232), 0.05);
+      .timeline-node {
+        transform: translateX(-50%) scale(1.25);
+        box-shadow: 0 0 0 2px var(--global-theme-color);
+      }
+    }
+  }
+  .timeline-node {
+    position: absolute;
+    left: $news-line-left - 0.25rem;
+    top: 0.35rem;
+    width: 10px;
+    height: 10px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: var(--global-theme-color);
+    border: 2px solid var(--global-bg-color);
+    box-shadow: 0 0 0 1px var(--global-divider-color);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .timeline-meta {
+    font-size: 0.875rem;
+    color: var(--global-text-color-light);
+    margin-bottom: 0.25rem;
+  }
+  .timeline-content {
+    font-size: 1rem;
+    color: var(--global-text-color);
+    line-height: 1.6;
+  }
+  .news-title {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .news-read-more {
+    font-size: 0.875rem;
+    color: var(--global-theme-color);
+    margin-left: 0.5rem;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 // Social (bottom)
@@ -266,7 +575,7 @@ footer.sticky-bottom {
   padding-bottom: 5rem;
   h1 {
     color: var(--global-theme-color);
-    font-size: 5rem;
+    font-size: 3rem;  // ppjhh-style: was 5rem
   }
 }
 
@@ -494,6 +803,195 @@ footer.sticky-bottom {
         border-color: var(--global-text-color);
       }
     }
+  }
+}
+
+// Featured Works: components in a row (horizontal); inside each: top = image, bottom = paper info
+.publications.featured-works {
+  margin-top: 0;
+  h2 {
+    margin-top: 0;
+  }
+  .featured-works-grid {
+    margin-bottom: 1.5rem;
+  }
+  .featured-works-horizontal {
+    > ol.bibliography {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      > li {
+        display: flex;
+        flex-direction: column;
+        background: $white-color;
+        border-radius: $card-radius;
+        box-shadow: $card-shadow;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+        transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+        &:hover {
+          box-shadow: $card-shadow-hover;
+          transform: translateY(-4px);
+          border-color: rgba(0, 0, 0, 0.1);
+        }
+        > .bib-thumbnail {
+          flex: 0 0 250px;
+          height: 100px;
+          width: 100%;
+          background: #f8f8f8;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+        }
+        > .row {
+          flex: 1;
+          min-height: 0;
+          padding: 0.5rem 1rem;
+          display: block;
+          max-width: none;
+        }
+        .col-sm-2,
+        .col-sm-8 {
+          max-width: none;
+          flex: none;
+          width: 100%;
+        }
+        .abbr { margin-bottom: 0.2rem; }
+        .title { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.15rem; line-height: 1.3; }
+        .author, .periodical { font-size: 0.75rem; color: var(--global-text-color-light); margin-bottom: 0.2rem; }
+        .links a.btn { font-size: 0.7rem; padding: 0.1rem 0.35rem; margin-right: 0.15rem; margin-bottom: 0.15rem; }
+      }
+    }
+  }
+}
+
+// Publications list page: timeline + card style, no thumbnail
+.publications:not(.featured-works) {
+  .bib-thumbnail {
+    display: none;
+  }
+  // Single timeline line when using year groups — year in left column, line, then cards
+  $timeline-line: 3.25rem;
+  $timeline-padding: 5rem;
+  $ol-padding: 2.5rem;
+  &.publications-timeline {
+    position: relative;
+    padding-left: $timeline-padding;
+    &::before {
+      content: '';
+      position: absolute;
+      left: $timeline-line;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      width: 2px;
+      background: var(--global-divider-color);
+      border-radius: 1px;
+      z-index: 0;
+    }
+  }
+  .timeline-year-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+    &:last-child ol.bibliography {
+      margin-bottom: 0;
+    }
+  }
+  .timeline-year-label {
+    position: absolute;
+    left: -$timeline-padding;
+    top: 2.0625rem;
+    transform: translateY(-50%);
+    width: 3rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--global-theme-color);
+    white-space: nowrap;
+    text-align: right;
+    z-index: 1;
+    letter-spacing: 0.02em;
+    padding-right: 0.4rem;
+  }
+  ol.bibliography {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-left: $ol-padding;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+    &::before {
+      content: none;
+    }
+    li {
+      position: relative;
+      z-index: 1;
+      background: $white-color;
+      border-radius: $card-radius;
+      box-shadow: $card-shadow;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 0;
+      margin-left: 0;
+      transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+      &::before {
+        content: '';
+        position: absolute;
+        left: $timeline-line - $timeline-padding - $ol-padding;
+        top: 1.5rem;
+        width: 10px;
+        height: 10px;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background: var(--global-theme-color);
+        border: 2px solid var(--global-bg-color);
+        box-shadow: 0 0 0 1px var(--global-divider-color);
+        z-index: 2;
+      }
+      &:hover {
+        box-shadow: $card-shadow-hover;
+        transform: translateX(4px);
+        border-color: rgba(0, 0, 0, 0.08);
+      }
+      > .row {
+        display: block;
+        max-width: none;
+      }
+      .abbr {
+        height: auto;
+        margin-bottom: 0.5rem;
+        abbr {
+          font-size: 0.8125rem;
+          padding: 0.25rem 0.5rem;
+        }
+      }
+      .col-sm-2,
+      .col-sm-8 {
+        max-width: none;
+        flex: none;
+        width: 100%;
+      }
+      .title {
+        font-size: 1.0625rem;
+        font-weight: 600;
+        margin-bottom: 0.35rem;
+      }
+      .author, .periodical {
+        font-size: 0.9375rem;
+        color: var(--global-text-color-light);
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  .links a.btn {
+    font-size: 0.8125rem;
+    padding: 0.25rem 0.6rem;
   }
 }
 

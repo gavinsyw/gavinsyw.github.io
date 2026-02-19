@@ -3,7 +3,7 @@ layout: page
 title: Projects
 permalink: /projects/
 # description: This page is still under construction.
-nav: true
+nav: false   # 暂不展示，等想好内容再打开
 display_categories: []
 horizontal: false
 ---

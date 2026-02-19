@@ -1,22 +1,23 @@
 <div class="news">
-  <h2>News</h2>
-  {% if site.news  %}
-    <div class="table-responsive">
-      <table class="table table-sm table-borderless">
-      {% assign news = site.news | reverse %}
+  <h2>Recent News</h2>
+  {% if site.news %}
+    {% assign news = site.news | reverse %}
+    <div class="news-timeline">
+      <div class="timeline-line" aria-hidden="true"></div>
       {% for item in news limit: site.news_limit %}
-        <tr>
-          <th scope="row">{{ item.date | date: "%b %-d, %Y" }}</th>
-          <td>
-            {% if item.inline %}
-              {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-            {% else %}
-              <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-            {% endif %}
-          </td>
-        </tr>
+      <article class="timeline-item">
+        <div class="timeline-node" aria-hidden="true"></div>
+        <div class="timeline-meta">{{ item.date | date: "%b %-d, %Y" }}</div>
+        <div class="timeline-content">
+          {% if item.inline %}
+            {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+          {% else %}
+            <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            <a class="news-read-more" href="{{ item.url | relative_url }}">Read more</a>
+          {% endif %}
+        </div>
+      </article>
       {% endfor %}
-      </table>
     </div>
   {% else %}
     <p>No news so far...</p>

@@ -1,6 +1,11 @@
 ---
 ---
-
+{% comment %}Left column: journal/venue cover thumbnail (Featured Works) or hidden on list page{% endcomment %}
+<div class="bib-thumbnail{% unless entry.thumbnail %} bib-thumbnail-placeholder{% endunless %}">
+  {% if entry.thumbnail %}
+  <img src="{{ entry.thumbnail | prepend: 'assets/img/' | relative_url }}" alt="" loading="lazy">
+  {% endif %}
+</div>
 <div class="row">
   <div class="col-sm-2 abbr">
   {% if entry.abbr %}
