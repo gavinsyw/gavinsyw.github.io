@@ -2,11 +2,14 @@
  * Content
  ******************************************************************************/
 
- body {
-   padding-bottom: 70px;
-   color: var(--global-text-color);
-   background-color: var(--global-bg-color);
- }
+body {
+  padding-bottom: 70px;
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
+  font-size: 1.0625rem;   // ~17px, ppjhh-style readability
+  line-height: 1.75;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
 
  body.fixed-top-nav {
    // Add some padding for the nav-bar.
@@ -22,11 +25,14 @@
   max-width: $max-content-width;
 }
 
-// Profile
-.profile {
-  img {
-    width: 100%;
-  }
+// Section spacing (ppjhh-style): larger gap between About / News / Featured Works
+.about-section,
+.news-section,
+.featured-works-section {
+  margin-top: $section-spacing;
+}
+.contact-section {
+  margin-top: 2.5rem;
 }
 
 // TODO: redefine content layout.

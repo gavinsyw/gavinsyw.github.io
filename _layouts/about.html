@@ -8,46 +8,78 @@ layout: default
     <h1 class="post-title">
      {% if site.title == "blank" %}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{% else %}{{ site.title }}{% endif %}
     </h1>
-     <p class="desc">{{ page.description }}</p>
-  </header>
-
-  <article>
-    {% if page.profile %}
-    <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-      {% if page.profile.image %}
-        {% responsive_image_block %}
-          path: {{ page.profile.image | prepend: 'assets/img/' }}
-          class: "img-fluid z-depth-1 rounded"
-        {% endresponsive_image_block %}
-      {% endif %}
-      {% if page.profile.address %}
-        <div class="address">
-          {{ page.profile.address }}
-        </div>
-      {% endif %}
-    </div>
-    {% endif %}
-
-    <div class="clearfix">
-      {{ content }}
-    </div>
-
-    {% if page.news %}
-      {% include news.html %}
-    {% endif %}
-
-    {% if page.selected_papers %}
-      {% include selected_papers.html %}
-    {% endif %}
-
+    <p class="desc">{{ page.description }}</p>
     {% if page.social %}
-    <div class="social">
+    <div class="header-contact">
       <div class="contact-icons">
         {% include social.html %}
       </div>
+      {% if site.contact_note %}
       <div class="contact-note">{{ site.contact_note }}</div>
+      {% endif %}
     </div>
     {% endif %}
+  </header>
+
+  <article>
+    <section class="about-section about-me-block">
+      <h2>About me<span class="cn-egg-wrapper" aria-label="Happy Chinese Lunar New Year">
+        <span class="cn-egg" aria-hidden="true">🏮</span>
+        <span class="cn-egg-tooltip">Happy Chinese Lunar New Year</span>
+      </span></h2>
+      <div class="about-me-row">
+        <div class="about-me-text">
+          {{ content }}
+        </div>
+        {% if page.profile and page.profile.image %}
+        <div class="profile profile-card">
+          <div class="profile-image-wrap">
+            {% responsive_image_block %}
+              path: {{ page.profile.image | prepend: 'assets/img/' }}
+              class: "profile-image img-fluid z-depth-1"
+            {% endresponsive_image_block %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+      {% if page.research_keywords and page.research_keywords.size > 0 %}
+      <div class="about-research">
+        <span class="about-research-label">Research</span>
+        <div class="about-research-tags">
+          {% for kw in page.research_keywords %}
+          <span class="about-research-tag">{{ kw }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      {% if page.education and page.education.size > 0 %}
+      <div class="about-education">
+        <span class="about-education-label">Education</span>
+        <ul class="education-list">
+          {% for item in page.education %}
+          <li class="education-item">
+            <span class="education-icon" aria-hidden="true">🎓</span>
+            <span class="education-degree">{{ item.degree }}</span>
+            <span class="education-detail">{{ item.field }}, {{ item.institution }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </section>
+
+    {% if page.news %}
+    <section class="news-section">
+      {% include news.html %}
+    </section>
+    {% endif %}
+
+    {% if page.selected_papers %}
+    <section class="featured-works-section">
+      {% include selected_papers.html %}
+    </section>
+    {% endif %}
+
   </article>
 
 </div>
