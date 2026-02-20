@@ -358,6 +358,32 @@ blockquote {
       background-color: var(--global-bg-color);
     }
 }
+
+// About hover dropdown: show panel on mouse over (desktop)
+.nav-item.about-dropdown {
+  position: relative;
+  .about-dropdown-caret {
+    font-size: 0.6em;
+    margin-left: 0.25em;
+    opacity: 0.8;
+    transition: transform 0.2s ease;
+  }
+  .about-dropdown-menu {
+    display: none;
+    margin-top: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    min-width: 11rem;
+    top: 100%;
+    left: 0;
+  }
+  &:hover .about-dropdown-menu {
+    display: block;
+  }
+  &:hover .about-dropdown-caret {
+    transform: rotate(180deg);
+  }
+}
 .navbar.navbar-light {
   a {
     &:hover {

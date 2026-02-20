@@ -22,14 +22,23 @@
       </button>
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          <!-- About / Bio -->
-          <li class="nav-item {% if page.title == 'About' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
+          <!-- About / Bio (hover dropdown for section navigation) -->
+          <li class="nav-item dropdown about-dropdown {% if page.title == 'About' %}active{% endif %}">
+            <a class="nav-link" href="{{ '/' | relative_url }}" id="aboutNavLink" aria-haspopup="true" aria-expanded="false">
               About
               {% if page.title == "About" %}
                 <span class="sr-only">(current)</span>
               {% endif %}
+              <i class="fas fa-chevron-down about-dropdown-caret"></i>
             </a>
+            <div class="dropdown-menu about-dropdown-menu" aria-labelledby="aboutNavLink">
+              <a class="dropdown-item" href="{{ '/' | relative_url }}#about-me">About me</a>
+              <a class="dropdown-item" href="{{ '/' | relative_url }}#education">Education</a>
+              <a class="dropdown-item" href="{{ '/' | relative_url }}#recent-news">Recent News</a>
+              <a class="dropdown-item" href="{{ '/' | relative_url }}#featured-works">Featured Works</a>
+              <a class="dropdown-item" href="{{ '/' | relative_url }}#awards">Awards</a>
+              <a class="dropdown-item" href="{{ '/' | relative_url }}#academic-services">Services</a>
+            </div>
           </li>
           {% if site.blog_name %}
           <!-- Blog -->

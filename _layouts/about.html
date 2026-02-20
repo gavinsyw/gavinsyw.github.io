@@ -22,7 +22,7 @@ layout: default
   </header>
 
   <article>
-    <section class="about-section about-me-block">
+    <section id="about-me" class="about-section about-me-block">
       <h2>About me<span class="cn-egg-wrapper" aria-label="Happy Chinese Lunar New Year">
         <span class="cn-egg" aria-hidden="true">🏮</span>
         <span class="cn-egg-tooltip">Happy Chinese Lunar New Year</span>
@@ -53,7 +53,7 @@ layout: default
       </div>
       {% endif %}
       {% if page.education and page.education.size > 0 %}
-      <div class="about-education">
+      <div id="education" class="about-education">
         <span class="about-education-label">Education</span>
         <ul class="education-list">
           {% for item in page.education %}
@@ -69,20 +69,20 @@ layout: default
     </section>
 
     {% if page.news %}
-    <section class="news-section">
+    <section id="recent-news" class="news-section">
       {% include news.html %}
     </section>
     {% endif %}
 
     {% if page.selected_papers %}
-    <section class="featured-works-section">
+    <section id="featured-works" class="featured-works-section">
       {% include selected_papers.html %}
     </section>
     {% endif %}
 
     {% assign sorted_sections = site.main_sections | sort: "order" %}
     {% for sec in sorted_sections %}
-    <section class="about-section main-section-block">
+    <section id="{{ sec.title | slugify }}" class="about-section main-section-block">
       <h2>{{ sec.title }}</h2>
       <div class="main-section-content">
         {{ sec.content }}
