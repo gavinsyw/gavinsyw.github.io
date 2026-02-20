@@ -87,6 +87,8 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  main_sections:
+    output: false
 
 news_limit: 5
 

@@ -80,6 +80,16 @@ layout: default
     </section>
     {% endif %}
 
+    {% assign sorted_sections = site.main_sections | sort: "order" %}
+    {% for sec in sorted_sections %}
+    <section class="about-section main-section-block">
+      <h2>{{ sec.title }}</h2>
+      <div class="main-section-content">
+        {{ sec.content }}
+      </div>
+    </section>
+    {% endfor %}
+
   </article>
 
 </div>
