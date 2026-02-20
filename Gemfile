@@ -9,7 +9,7 @@ group :jekyll_plugins do
     gem 'jekyll-feed'
     gem 'jekyll-github-metadata'
     gem 'jekyll-paginate-v2'
-    gem 'jekyll-responsive-image'
+    # gem 'jekyll-responsive-image'  # requires ImageMagick/rmagick; disabled for local Windows build
     gem 'jekyll-scholar'
     gem 'jekyll-sitemap'
     gem 'jekyll-target-blank'

@@ -34,10 +34,7 @@ layout: default
         {% if page.profile and page.profile.image %}
         <div class="profile profile-card">
           <div class="profile-image-wrap">
-            {% responsive_image_block %}
-              path: {{ page.profile.image | prepend: 'assets/img/' }}
-              class: "profile-image img-fluid z-depth-1"
-            {% endresponsive_image_block %}
+            <img src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}" class="profile-image img-fluid z-depth-1" alt="">
           </div>
         </div>
         {% endif %}

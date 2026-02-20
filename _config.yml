@@ -128,7 +128,7 @@ gem:
   - jekyll-feed
   - jekyll-github-metadata
   - jekyll-paginate-v2
-  - jekyll-responsive-image
+  # - jekyll-responsive-image  # disabled for local Windows (needs ImageMagick)
   - jekyll/scholar
   - jekyll-sitemap
   - jekyll-target-blank
