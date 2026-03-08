@@ -16,10 +16,10 @@ research_keywords:
   - Hardware-Software Co-design
 
 education:
-  - degree: Ph.D.
+  - degree: Ph.D., 2026
     institution: Carnegie Mellon University
     field: Electrical and Computer Engineering
-  - degree: B.S. (with honor)
+  - degree: B.S. (with honor), 2021
     institution: Shanghai Jiao Tong University
     field: Information Engineering
 
