@@ -1,0 +1,64 @@
+{
+  "_comment": "Floating icon next to 'About me'. default = when no period matches (use empty strings to hide). periods: start/end = month-day (MM-DD); first matching period wins.",
+  "default": {
+    "icon": "",
+    "text": ""
+  },
+  "periods": [
+    {
+      "start": "12-27",
+      "end": "01-5",
+      "icon": "🎉",
+      "text": "Happy New Year"
+    },
+    {
+      "start": "01-15",
+      "end": "02-15",
+      "icon": "🏮",
+      "text": "Happy Chinese Lunar New Year"
+    },
+    {
+      "start": "12-24",
+      "end": "12-26",
+      "icon": "🎄",
+      "text": "Merry Christmas"
+    },
+    {
+      "start": "03-08",
+      "end": "03-08",
+      "icon": "👩‍💼",
+      "text": "International Women's Day"
+    }
+    ,
+    {
+      "start": "05-01",
+      "end": "05-01",
+      "icon": "🛠️",
+      "text": "International Labor Day"
+    },
+    {
+      "start": "09-10",
+      "end": "09-10",
+      "icon": "🎓",
+      "text": "Teacher's Day"
+    },
+    {
+      "start": "10-05",
+      "end": "10-05",
+      "icon": "📚",
+      "text": "World Teachers' Day"
+    },
+    {
+      "start": "03-17",
+      "end": "03-17",
+      "icon": "🍀",
+      "text": "St. Patrick's Day"
+    },
+    {
+      "start": "01-15",
+      "end": "01-15",
+      "icon": "🕊️",
+      "text": "Martin Luther King Jr. Day"
+    }
+  ]
+}

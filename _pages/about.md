@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-description: Ph.D. student of <a href="https://ece.cmu.edu">Electrical and Computer Engineering, Carnegie Mellon University</a>.
+description: Postdoc Associate, Ph.D., <a href="https://ece.cmu.edu">Electrical and Computer Engineering, Carnegie Mellon University</a>.
 
 profile:
   align: right
@@ -28,4 +28,4 @@ selected_papers: true
 social: true
 ---
 
-<p>I am a Ph.D. student at <a href="https://www.witechlab.com/">WiTech Lab</a> of Electrical and Computer Engineering, <a href="https://cmu.edu">Carnegie Mellon University</a>, advised by Prof. <a href="https://swarunkumar.com">Swarun Kumar</a>. Before that, I obtained my bachelor's degree (with honor) in Information Engineering from <a href="https://www.sjtu.edu.cn">Shanghai Jiao Tong University</a>, where I was advised by Prof. <a href="https://jhc.sjtu.edu.cn/~haimingjin/">Haiming Jin</a>. I also work closely with Prof. <a href="https://www.cs.utexas.edu/~lili/">Lili Qiu</a> at <a href="https://utexas.edu">The University of Texas at Austin</a> and Microsoft Research Asia.</p>
+<p>I am a Postdoctoral associate at <a href="https://www.witechlab.com/">WiTech Lab</a> of Electrical and Computer Engineering, <a href="https://cmu.edu">Carnegie Mellon University</a>, advised by Prof. <a href="https://swarunkumar.com">Swarun Kumar</a>, where I also gained my Ph.D. degree. Before that, I obtained my bachelor's degree (with honor) in Information Engineering from <a href="https://www.sjtu.edu.cn">Shanghai Jiao Tong University</a>, where I was advised by Prof. <a href="https://jhc.sjtu.edu.cn/~haimingjin/">Haiming Jin</a>. I also work closely with Prof. <a href="https://www.cs.utexas.edu/~lili/">Lili Qiu</a> at <a href="https://utexas.edu">The University of Texas at Austin</a> and Microsoft Research Asia.</p>
