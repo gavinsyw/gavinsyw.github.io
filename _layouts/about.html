@@ -25,11 +25,15 @@ layout: default
     <section id="about-me" class="about-section about-me-block">
       <h2>About me
       {% if site.data.floating_icon %}
-      {% assign _fi = site.data.floating_icon %}{% assign _md = site.time | date: "%m-%d" %}{% assign _icon = _fi.default.icon %}{% assign _text = _fi.default.text %}{% for _p in _fi.periods %}{% if _md >= _p.start and _md <= _p.end and _icon == _fi.default.icon %}{% assign _icon = _p.icon %}{% assign _text = _p.text %}{% endif %}{% endfor %}{% if _icon != "" or _text != "" %} <span class="cn-egg-wrapper" aria-label="{{ _text | default: ' ' }}">
-        <span class="cn-egg" aria-hidden="true">{{ _icon }}</span>
-        <span class="cn-egg-tooltip">{{ _text }}</span>
-      </span>{% endif %}
+      <span id="floating-icon" class="cn-egg-wrapper" style="display:none" aria-label=" ">
+        <span class="cn-egg" aria-hidden="true"></span>
+        <span class="cn-egg-tooltip"></span>
+      </span>
       {% endif %}</h2>
+      {% if site.data.floating_icon %}
+      <script id="floating-icon-data" type="application/json">{{ site.data.floating_icon | jsonify }}</script>
+      <script src="{{ '/assets/js/floating-icon.js' | relative_url }}"></script>
+      {% endif %}
       <div class="about-me-row">
         <div class="about-me-text">
           {{ content }}
