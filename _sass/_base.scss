@@ -790,6 +790,10 @@ footer.sticky-bottom {
           border-bottom: 1px solid;
           font-style: normal;
         }
+        .author-self {
+          color: var(--global-text-color);
+          font-weight: 600;
+        }
       }
       .links {
         a.btn {
@@ -842,6 +846,11 @@ footer.sticky-bottom {
       }
     }
   }
+}
+
+// Highlight your name on publication lists (main text color in light mode; brighter in dark mode where body grey matches muted author line)
+html[data-theme='dark'] .publications ol.bibliography li .author .author-self {
+  color: #{$white-color};
 }
 
 // Featured Works: components in a row (horizontal); inside each: top = image, bottom = paper info

@@ -9,6 +9,8 @@
 "Wang":
   - firstname: ["Jingxian"]
     url: https://wangwireless.com
+  - firstname: ["Chonghuan"]
+    url: https://www.mit.edu/~chwang9
 
 "Majidi":
   - firstname: ["Carmel", "C."]
@@ -25,10 +27,6 @@
 "Qiu":
   - firstname: ["Lili", "L."]
     url: https://www.cs.utexas.edu/~lili
-
-"Wang":
-  - firstname: ["Chonghuan"]
-    url: https://www.mit.edu/~chwang9
 
 "Zadan":
   - firstname: ["Mason", "M."]

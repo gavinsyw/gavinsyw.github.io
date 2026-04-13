@@ -1,5 +1,7 @@
 ---
 ---
+{% assign me_first = site.scholar.first_name | default: site.first_name %}
+{% assign me_last = site.scholar.last_name | default: site.last_name %}
 {% comment %}Left column: journal/venue cover thumbnail (Featured Works) or hidden on list page{% endcomment %}
 <div class="bib-thumbnail{% unless entry.thumbnail %} bib-thumbnail-placeholder{% endunless %}">
   {% if entry.thumbnail %}
@@ -25,8 +27,14 @@
       <div class="author">
         {% for author in entry.author_array %}
           {% assign author_is_self = false %}
-          {% if author.last == site.scholar.last_name%}
-            {% if site.scholar.first_name contains author.first%}
+          {% assign af = author.first | downcase | strip %}
+          {% assign al = author.last | downcase | strip %}
+          {% assign mf = me_first | downcase | strip %}
+          {% assign ml = me_last | downcase | strip %}
+          {% assign af_len = author.first | size %}
+          {% assign mf_len = me_first | size %}
+          {% if al == ml %}
+            {% if af == mf or af contains mf or mf contains af and af_len >= mf_len %}
               {% assign author_is_self = true %}
             {% endif %}
           {% endif %}
@@ -42,14 +50,14 @@
           
           {% if forloop.length == 1 %}
             {% if author_is_self %}
-              <b>{{author.first}} {{author.last}}</b>
+              <span class="author-self">{{author.first}} {{author.last}}</span>
             {% else %}
               {{author.first}} {{author.last}}
             {% endif %}
           {% else %}
             {% unless forloop.last %}
               {% if author_is_self %}
-                <b>{{author.first}} {{author.last}}</b>,
+                <span class="author-self">{{author.first}} {{author.last}}</span>,
               {% else %}
                 {% if coauthor_url %}
                   <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>,
@@ -59,7 +67,7 @@
               {% endif %}
             {% else %}
               {% if author_is_self %}
-                and <b>{{author.first}} {{author.last}}</b>
+                and <span class="author-self">{{author.first}} {{author.last}}</span>
               {% else %}
                 {% if coauthor_url %}
                   and <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
