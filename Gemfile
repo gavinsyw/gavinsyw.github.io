@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 # Pin jekyll-sass-converter to avoid sass-embedded EOFError in Docker
 gem 'jekyll-sass-converter', '~> 2.2.0'
+gem 'csv'
+gem 'observer'
+gem 'ostruct'
+gem 'faraday-retry'
 group :jekyll_plugins do
     gem 'jekyll'
     gem 'jekyll-archives'

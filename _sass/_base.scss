@@ -207,6 +207,25 @@ blockquote {
       display: block;
     }
   }
+  .cfp-panel {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 8px;
+    background: rgba(var(--global-theme-color-rgb, 91, 79, 232), 0.04);
+    .cfp-panel-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--global-theme-color);
+    }
+    .cfp-panel-content {
+      font-size: 0.95rem;
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
   .about-research {
     margin-top: 1.5rem;
     padding-top: 1.25rem;

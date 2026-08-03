@@ -31,7 +31,7 @@ layout: default
       </span>
       {% endif %}</h2>
       {% if site.data.floating_icon %}
-      <script id="floating-icon-data" type="application/json">{{ site.data.floating_icon | jsonify }}</script>
+      <script id="floating-icon-data" type="application/json">{{ site.data.floating_icon | jsonify | replace: '</', '<\/' }}</script>
       <script src="{{ '/assets/js/floating-icon.js' | relative_url }}"></script>
       {% endif %}
       <div class="about-me-row">
@@ -49,6 +49,13 @@ layout: default
         </div>
         {% endif %}
       </div>
+      {% assign cfp_panels = site.main_sections | where: "panel", true %}
+      {% for sec in cfp_panels %}
+      <div class="cfp-panel">
+        <h2 class="cfp-panel-title">{{ sec.title }}</h2>
+        <div class="cfp-panel-content">{{ sec.content }}</div>
+      </div>
+      {% endfor %}
       {% if page.research_keywords and page.research_keywords.size > 0 %}
       <div class="about-research">
         <span class="about-research-label">Research</span>
@@ -87,7 +94,7 @@ layout: default
     </section>
     {% endif %}
 
-    {% assign sorted_sections = site.main_sections | sort: "order" %}
+    {% assign sorted_sections = site.main_sections | where_exp: "sec", "sec.panel != true" | sort: "order" %}
     {% for sec in sorted_sections %}
     <section id="{{ sec.title | slugify }}" class="about-section main-section-block">
       <h2>{{ sec.title }}</h2>
