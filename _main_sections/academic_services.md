@@ -3,6 +3,7 @@ title: Academic Services
 order: 2
 ---
 
+- **Guest Editor** - [Biomimetics](https://www.mdpi.com/journal/biomimetics/special_issues/F0EF1S9MD4). 2026-2027.
 - **TPC Co-Chair** - [ACM S3 Workshop 2025](https://s3.witechlab.com/). Co-located with ACM MobiCom'25, Hong Kong, China.
 - **Invited Reviewer** - [Advanced Science](https://advanced.onlinelibrary.wiley.com/journal/21983844). 2025.
 - **Invited Reviewer** - [ACM IMWUT](https://dl.acm.org/journal/imwut). 2022-2025.
