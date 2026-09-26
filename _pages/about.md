@@ -28,4 +28,8 @@ selected_papers: true
 social: true
 ---
 
-<p>I am a Postdoctoral associate at <a href="https://www.witechlab.com/">WiTech Lab</a> of Electrical and Computer Engineering, <a href="https://cmu.edu">Carnegie Mellon University</a>, advised by Prof. <a href="https://swarunkumar.com">Swarun Kumar</a>, where I also gained my Ph.D. degree. Before that, I obtained my bachelor's degree (with honor) in Information Engineering from <a href="https://www.sjtu.edu.cn">Shanghai Jiao Tong University</a>, where I was advised by Prof. <a href="https://jhc.sjtu.edu.cn/~haimingjin/">Haiming Jin</a>. I also work closely with Prof. <a href="https://www.cs.utexas.edu/~lili/">Lili Qiu</a> at <a href="https://utexas.edu">The University of Texas at Austin</a> and Microsoft Research Asia.</p>
+<p>I am a Postdoctoral associate at <a href="https://www.witechlab.com/">WiTech Lab</a> of Electrical and Computer Engineering, <a href="https://cmu.edu">Carnegie Mellon University</a>, advised by Prof. <a href="https://swarunkumar.com">Swarun Kumar</a>, where I also gained my Ph.D. degree. 
+I am also a researcher at Bosch Research.
+My work focus on all parts of the wireless systems, including communication, sensing, power transfer, hardware, and material design.
+I also work on the intersection between wireless and robotic systems, where I specifically focus on soft and small-sized robots.
+Before that, I obtained my bachelor's degree (with honor) in Information Engineering from <a href="https://www.sjtu.edu.cn">Shanghai Jiao Tong University</a>, where I was advised by Prof. <a href="https://jhc.sjtu.edu.cn/~haimingjin/">Haiming Jin</a>. I also work closely with Prof. <a href="https://www.cs.utexas.edu/~lili/">Lili Qiu</a> at <a href="https://utexas.edu">The University of Texas at Austin</a> and Microsoft Research Asia.</p>
