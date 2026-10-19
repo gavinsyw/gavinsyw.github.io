@@ -31,6 +31,7 @@ bundle exec jekyll serve
 
 - **文案与头像**：编辑 `_pages/about.md` 正文；头像由 front matter 的 `profile.image` 指定（如 `self_photo.jpg`，对应 `assets/img/` 下）。
 - **Education**：在 `about.md` 的 `education` 列表里修改学位、学校、专业；`icon` 指定相对 `assets/img/` 的学校徽标路径。来源记录在 `assets/img/universities/sources.txt`。
+- **Work Experience**：在 `about.md` 的 `work_experience` 列表里修改职位（`title`）、时间（`period`）、团队（`group`）、机构（`organization`）、地点（`location`）和徽标（`icon`）。显示于 Education 之后，沿用两行文字和 48px 徽标布局。
 - **区块间距**：在 `_sass/_variables.scss` 中可调 `$section-spacing`；Contact 区块上边距在 `_sass/_layout.scss` 的 `.contact-section`。
 
 ### Research（首页）

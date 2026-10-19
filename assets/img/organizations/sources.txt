@@ -1,0 +1,9 @@
+Bosch icon (official, 180px):
+https://www.bosch.com/media/tech/tech_images/apple-touch-icon.png
+
+Microsoft symbol (official SVG):
+https://learn.microsoft.com/en-us/entra/identity-platform/media/howto-add-branding-in-apps/ms-symbollockup_mssymbol_19.svg
+Source page:
+https://learn.microsoft.com/en-us/entra/identity-platform/howto-add-branding-in-apps
+
+Carnegie Mellon University seal reuses assets/img/universities/cmu-seal.png.

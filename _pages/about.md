@@ -18,6 +18,26 @@ education:
     icon: universities/sjtu-seal.png
     field: Information Engineering
 
+work_experience:
+  - title: Research Scientist
+    period: "2026.7–present"
+    group: Sensing AI
+    organization: Bosch Research
+    location: Pittsburgh, PA, USA
+    icon: organizations/bosch.png
+  - title: Postdoctoral Researcher
+    period: "2026.2–present"
+    group: WiTech Lab
+    organization: Carnegie Mellon University
+    location: Pittsburgh, PA, USA
+    icon: universities/cmu-seal.png
+  - title: Research Intern
+    period: "2023.6–2023.8"
+    group: Wireless Group
+    organization: Microsoft Research Asia
+    location: Shanghai, China
+    icon: organizations/microsoft.svg
+
 news: true
 research: true
 social: true

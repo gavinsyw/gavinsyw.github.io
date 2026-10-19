@@ -74,6 +74,24 @@ layout: default
         </ul>
       </div>
       {% endif %}
+      {% if page.work_experience and page.work_experience.size > 0 %}
+      <div id="work-experience" class="about-work-experience">
+        <span class="about-work-experience-label">Work Experience</span>
+        <ul class="work-experience-list">
+          {% for item in page.work_experience %}
+          <li class="work-experience-item">
+            {% if item.icon %}
+            <img class="work-icon" src="{{ item.icon | prepend: '/assets/img/' | relative_url }}" alt="" aria-hidden="true" width="48" height="48">
+            {% endif %}
+            <div class="work-text">
+              <span class="work-title">{{ item.title | escape }}, {{ item.period | escape }}</span>
+              <span class="work-detail">{{ item.group | escape }}, {{ item.organization | escape }}. {{ item.location | escape }}.</span>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
     </section>
 
     {% if page.news %}

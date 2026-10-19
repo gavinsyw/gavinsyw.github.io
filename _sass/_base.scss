@@ -226,11 +226,14 @@ blockquote {
       }
     }
   }
-  .about-education {
+  .about-education,
+  .about-work-experience {
+    scroll-margin-top: 5rem;
     margin-top: 1.5rem;
     padding-top: 1.25rem;
     border-top: 1px solid var(--global-divider-color);
-    .about-education-label {
+    .about-education-label,
+    .about-work-experience-label {
       display: block;
       font-size: 0.75rem;
       font-weight: 600;
@@ -240,12 +243,14 @@ blockquote {
       margin-bottom: 0.75rem;
     }
   }
-  .education-list {
+  .education-list,
+  .work-experience-list {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  .education-item {
+  .education-item,
+  .work-experience-item {
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -263,7 +268,8 @@ blockquote {
     &:last-child {
       border-bottom: none;
     }
-    .education-icon {
+    .education-icon,
+    .work-icon {
       flex: 0 0 48px;
       align-self: center;
       width: 48px;
@@ -272,17 +278,21 @@ blockquote {
       border-radius: 50%;
       background: #fff;
     }
-    .education-text {
+    .work-icon { border-radius: 8px; }
+    .education-text,
+    .work-text {
       display: flex;
       flex-direction: column;
       flex: 1;
       min-width: 0;
     }
-    .education-degree {
+    .education-degree,
+    .work-title {
       font-weight: 600;
       color: var(--global-text-color);
     }
-    .education-detail {
+    .education-detail,
+    .work-detail {
       color: var(--global-text-color-light);
       font-size: 0.9375rem;
     }
