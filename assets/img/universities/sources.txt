@@ -1,0 +1,9 @@
+Carnegie Mellon University — official one-color university seal
+Source page: https://brand.cmu.edu/resources/downloads
+Original image: https://live-cmu-brand.pantheonsite.io/sites/default/files/cmu-brand-files/inline-images/visual-identity-seal-05_0.png
+
+Shanghai Jiao Tong University — official university seal
+Source page: https://vi.sjtu.edu.cn/index.php/articles/bulletin/13
+Original image: https://vi.sjtu.edu.cn/uploads/files/caf2f5045c47308250fab3812dfe2003-6896b91594f238b24e67696224948251.png
+
+Prepared for small-screen display by removing blank margins, scaling proportionally, and adding equal white padding. Original artwork and colors preserved.

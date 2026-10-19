@@ -1,0 +1,9 @@
+---
+---
+{% assign research_field = entry.research_field | strip %}
+{% if research_field != '' %}
+<article data-project-fields="{{ research_field | escape }}" data-year="{{ entry.year | escape }}">
+  <h4><a href="{{ '/publications/' | relative_url }}#{{ entry.key | escape }}">{{ entry.title | escape }}</a></h4>
+  <p>{{ entry.abbr | default: entry.journal | default: entry.booktitle | escape }} <span aria-hidden="true">·</span> {{ entry.year | escape }}</p>
+</article>
+{% endif %}

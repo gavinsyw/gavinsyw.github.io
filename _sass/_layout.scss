@@ -25,10 +25,10 @@ body {
   max-width: $max-content-width;
 }
 
-// Section spacing (ppjhh-style): larger gap between About / News / Featured Works
+// Section spacing (ppjhh-style): larger gap between About / News / Research
 .about-section,
 .news-section,
-.featured-works-section {
+.research-section {
   margin-top: $section-spacing;
 }
 .contact-section {

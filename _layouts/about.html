@@ -56,25 +56,19 @@ layout: default
         <div class="cfp-panel-content">{{ sec.content }}</div>
       </div>
       {% endfor %}
-      {% if page.research_keywords and page.research_keywords.size > 0 %}
-      <div class="about-research">
-        <span class="about-research-label">Research</span>
-        <div class="about-research-tags">
-          {% for kw in page.research_keywords %}
-          <span class="about-research-tag">{{ kw }}</span>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
       {% if page.education and page.education.size > 0 %}
       <div id="education" class="about-education">
         <span class="about-education-label">Education</span>
         <ul class="education-list">
           {% for item in page.education %}
           <li class="education-item">
-            <span class="education-icon" aria-hidden="true">🎓</span>
-            <span class="education-degree">{{ item.degree }}</span>
-            <span class="education-detail">{{ item.field }}, {{ item.institution }}</span>
+            {% if item.icon %}
+            <img class="education-icon" src="{{ item.icon | prepend: '/assets/img/' | relative_url }}" alt="" aria-hidden="true" width="48" height="48">
+            {% endif %}
+            <div class="education-text">
+              <span class="education-degree">{{ item.degree }}</span>
+              <span class="education-detail">{{ item.field }}, {{ item.institution }}</span>
+            </div>
           </li>
           {% endfor %}
         </ul>
@@ -88,9 +82,9 @@ layout: default
     </section>
     {% endif %}
 
-    {% if page.selected_papers %}
-    <section id="featured-works" class="featured-works-section">
-      {% include selected_papers.html %}
+    {% if page.research %}
+    <section id="research" class="research-section">
+      {% include research.html %}
     </section>
     {% endif %}
 
